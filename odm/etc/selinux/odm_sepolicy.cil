@@ -1,0 +1,2 @@
+(allow minidump64 sysfs_pmic_pon_log (file (ioctl read getattr lock map open watch watch_reads)))
+
