@@ -1,0 +1,23 @@
+service lct.ant_open /vendor/bin/hw/longcheer_antenna_cmd mode 1
+    class main
+    user radio
+    group radio
+    oneshot 
+    disabled
+
+service lct.ant_close /vendor/bin/hw/longcheer_antenna_cmd mode 2
+    class main
+    user radio
+    group radio 
+    oneshot
+    disabled
+
+on property:vendor.camera.front.enabled=1
+    start lct.ant_open
+
+on property:vendor.camera.front.enabled=0
+    start lct.ant_close
+
+on property:sys.boot_completed=1
+    start lct.ant_close
+

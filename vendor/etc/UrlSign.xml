@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CitUrlCheckConfig>
+    <UrlConfig device_name="device_name">
+        <prop sign_name="device_sign">sign</prop>
+        <cpuidsign>dWjxaWfdbSMzOot6DxA3qZXAEOAsgzmsBZRcQ5bWBuzplK9kZqoUvIzRDr3vPnM2Ohfvuj4K+oe5z0c59menIyyoA7Qn4vXfr53XlLOiqW5RUOBTOFhb9d19G8WQWVXq4aZEzSKlLCxbzLri0sJQ1W4bPWmukSraWZ6k9E5nh5+xA8M4DmkoUFkVScs5GPcWLDFhUo4b+oMSNl3obu3RUARpfszD3WEAXbNBxhACd6/OarcH5JjdTgCtsSK6S5/+eFKZCbOCXiYoobuMJdo9EN2HYqi0BGCgu9MvUgD+rWgrEN3dTCAxEYKPY2Vg+3iLGafKEfVq9868EnutKGYCXg==</cpuidsign>
+        <internalsign>Kt0a9x3wPUFKHI/K4V+LcY+SSfIQDfdDWjDDVQwU898Ma47NpsCtWmKRNkKMqZpfxanZFxKRl0/YX6HgT+ELKf4sJX1eSPO2aWbYqXp88Pmsbtn9lreSFn26XGsjOzOAkOzAS4l3TWaYhTDpWqVMmQjDsQozK1w2U+a0L7gJLgI=</internalsign>
+        <internal>https://hr.mioffice.cn/</internal>
+        <cpuid>https://kumiho.pt.xiaomi.com/mtb?check</cpuid>
+    </UrlConfig>
+</CitUrlCheckConfig>

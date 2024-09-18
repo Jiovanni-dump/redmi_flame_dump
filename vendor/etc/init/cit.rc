@@ -1,0 +1,3 @@
+on post-fs-data
+    # add for gsort
+    chmod 0666 /sys/class/qvga/qvga/rear_qvga
