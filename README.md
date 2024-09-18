@@ -1,0 +1,14 @@
+# missi_phone_cn-user 14 UKQ1.240523.001 V816.0.7.0.UGUCNXM release-keys
+- manufacturer: xiaomi qualcomm
+- platform: parrot
+- codename: flame
+- flavor: missi_phone_cn-user
+- release: 14
+- id: UKQ1.240523.001
+- incremental: V816.0.7.0.UGUCNXM
+- tags: release-keys
+- fingerprint: Redmi/flame/flame:12/SKQ1.231214.001/V816.0.7.0.UGUCNXM:user/release-keys
+- is_ab: true
+- brand: Redmi
+- branch: missi_phone_cn-user-14-UKQ1.240523.001-V816.0.7.0.UGUCNXM-release-keys
+- repo: redmi_flame_dump
