@@ -1,0 +1,49 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.odm.brand=Redmi
+ro.product.odm.device=flame
+ro.product.odm.manufacturer=Xiaomi
+ro.product.odm.model=flame
+ro.product.odm.cert=flame
+ro.product.odm.marketname=flame
+ro.product.odm.name=flame
+ro.product.model_for_attestation=flame
+ro.product.brand_for_attestation=Redmi
+ro.product.name_for_attestation=flame
+ro.product.device_for_attestation=flame
+ro.product.manufacturer_for_attestation=Xiaomi
+ro.vendor.build.fingerprint=Redmi/flame/flame:15/AQ3A.250604.001/OS3.0.2.0.WGUCNXM:user/release-keys
+ro.odm.product.cpu.abilist=arm64-v8a
+ro.odm.product.cpu.abilist32=
+ro.odm.product.cpu.abilist64=arm64-v8a
+ro.odm.build.date=Sun Jan  4 16:59:06 CST 2026
+ro.odm.build.date.utc=1767517146
+ro.odm.build.fingerprint=Redmi/flame/flame:15/AQ3A.250604.001/OS3.0.2.0.WGUCNXM:user/release-keys
+ro.odm.build.id=AQ3A.250604.001
+ro.odm.build.tags=release-keys
+ro.odm.build.type=user
+ro.odm.build.version.incremental=OS3.0.2.0.WGUCNXM
+ro.odm.build.version.release=15
+ro.odm.build.version.release_or_codename=15
+ro.odm.build.version.sdk=35
+####################################
+# from device/xiaomi/flame/odm/special_rw.prop
+####################################
+#enable sar feature
+persist.vendor.radio.dynamic_sar=1
+####################################
+# from variable ADDITIONAL_ODM_PROPERTIES
+####################################
+ro.vendor.qti.va_odm.support=1
+####################################
+# from variable PRODUCT_ODM_PROPERTIES
+####################################
+vendor.display.force_tonemapping=1
+ro.vendor.audio.karaoke.enable=true
+ro.miui.audio.karaoke.suppot.lowlatency=true
+persist.vendor.tracking.dfs=true
+import /odm/etc/${ro.boot.product.hardware.sku}_build.prop
+# end of file
+

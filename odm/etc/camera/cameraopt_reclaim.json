@@ -1,0 +1,437 @@
+{
+    "CameraReclaim_4Gmem": {
+        "killonce_configs" : [
+            {
+                "name": "kill_policy",
+                "config": {
+                    "oom_level": {
+                        "18432": 0,
+                        "23040": 100,
+                        "27648": 200,
+                        "32256": 250,
+                        "55296": 900,
+                        "80640": 950
+                    }
+                }
+            }
+        ],
+        "configs": [
+            {
+                "name": "protect_list",
+                "config": [
+                    "com.tencent.mobileqq",
+                    "com.ss.android.lark.kami"
+                ]
+            },
+            {
+                "name": "perceptible_list",
+                "config": [
+                    "com.tencent.mm",
+                    "com.miui.gallery",
+                    "com.miui.personalassistant",
+                    "com.xiaomi.bluetooth",
+                    "com.miui.securitycenter:ui",
+                    "com.miui.systemAdSolution",
+                    "com.google.process.gservices",
+                    "com.milink.service",
+                    "com.miui.mishare.connectivity",
+                    "com.miui.presale",
+                    "com.miui.powerinsight",
+                    "com.android.settings",
+                    "com.android.updater",
+                    "com.milink.service:core",
+                    "com.miui.securityadd",
+                    "com.mobiletools.systemhelper",
+                    "com.android.htmlviewer:remote",
+                    "com.milink.crossdeviceservice",
+                    "com.xiaomi.vtcamera"
+                ]
+            },
+            {
+                "name": "white_list",
+                "config": [
+                    "com.android.camera",
+                    "android.process.media",
+                    "com.android.traceur",
+                    "com.miui.home",
+                    "com.miui.fliphome",
+                    "com.miui.screenrecorder",
+                    "com.tencent.mm:push",
+                    "com.tencent.mobileqq:MSF",
+                    "com.ss.android.lark.kami:wschannel",
+                    "org.telegram.messenger",
+                    "org.thunderdog.challegram",
+                    "com.facebook.orca",
+                    "com.whatsapp",
+                    "com.facebook.katana",
+                    "jp.naver.line.android",
+                    "com.phonetest.application:CameraMemoryWatcher",
+                    "com.phonetest.application",
+                    "com.phonetest.stresstest",
+                    "android.camera.cts",
+                    "android.camera.cts:errorLoggingServiceProcess",
+                    "com.android.cts.verifier",
+                    "com.miui.avpressuretest",
+                    "com.android.mms:mms_service",
+                    "com.xiaomi.xmsf:services",
+                    "com.xiaomi.mtb",
+                    "com.modemdebug",
+                    "com.qualcomm.qti.autoregistration",
+                    "com.lbe.security.miui",
+                    "com.miui.aod",
+                    "com.android.incallui",
+                    "com.miui.voiceassist:core",
+                    "com.mi.health:device",
+                    "com.miui.tsmclient",
+                    "com.baidu.carlife.xiaomi",
+                    "com.android.cameraextensions",
+                    "android.process.acore",
+                    "com.whatsapp"
+                ]
+            },
+            {
+                "name": "dynamic_protect_list",
+                "config": [
+                        "com.tencent.mm",
+                        "com.tencent.mobileqq"
+                ]
+            },
+            {
+                "name": "skip_task_list",
+                "config": [
+                    "com.android.camera",
+                    "com.miui.home",
+                    "com.miui.gallery",
+                    "com.mi.android.globallauncher",
+                    "com.android.traceur"
+                ]
+            },
+            {
+                "name": "skip_boost_list",
+                "config": [
+                    "com.miui.face",
+                    "com.xiaomi.smarthome",
+                    "client.pid"
+                ]
+            }
+        ],
+        "ReclaimActions": {
+            "reclaim_once": {
+                "psi_monitor": [
+                    {
+                        "enable": true,
+                        "target": "102400",
+                        "cpu_psi_target": 40,
+                        "trigger": {
+                            "free": "0:102400",
+                            "cache": "1024000:-1"
+                        }
+                    }
+                ],
+                "60frames_arrived_event": [
+                    {
+                        "enable": false,
+                        "target": "102400",
+                        "cpu_psi_target": 40,
+                        "trigger": {
+                            "free": "0:102400",
+                            "cache": "1024000:-1"
+                        }
+                    }
+                ],
+                "3rdcam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "target": "102400",
+                        "cpu_psi_target": 40,
+                        "trigger": {
+                            "free": "0:102400",
+                            "cache": "1024000:-1"
+                        }
+                    }
+                ],
+                "miuicam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "target": "204800",
+                        "cpu_psi_target": 40,
+                        "trigger":{
+                            "free": "0:102400",
+                            "cache": "1024000:-1"
+                        }
+                    }
+                ]
+            },
+            "kill_once":{
+                "psi_monitor": [
+                    {
+                        "enable": false,
+                        "kill_level": 0,
+                        "cpu_psi_target": 50,
+                        "trigger": {
+                            "free": "0:204800",
+                            "cache": "0:1024000",
+                            "some_mem_psi": "4:-1"
+                        }
+                    },
+                    {
+                        "enable": true,
+                        "cpu_psi_target": 50,
+                        "kill_level": 0,
+                        "trigger": {
+                            "some_mem_psi": "15:-1"
+                        }
+                    }
+                ]
+            },
+            "kill_target":{
+                "miuicam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "free_target": "204800",
+                        "target": "1228800",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "miuicam_open_event":[
+                    {
+                        "enable": true,
+                        "free_target": "204800",
+                        "target": "1024000",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "miuicam_capture_event":[
+                    {
+                        "enable": false,
+                        "free_target": "204800",
+                        "target": "1024000",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:1228800"
+                        }
+                    }
+                ],
+                "miuicam_video_switch_event":[
+                    {
+                        "enable": false,
+                        "free_target": "204800",
+                        "target": "1024000",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "3rdcam_open_event":[
+                    {
+                        "enable": true,
+                        "free_target": "204800",
+                        "target": "1228800",
+                        "kill_level": 0,
+                        "trigger": {
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "3rdcam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "free_target": "204800",
+                        "target": "1228800",
+                        "kill_level": 0,
+                        "trigger": {
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "CameraReclaim_6Gmem": {
+        "killonce_configs" : [
+            {
+                "name": "kill_policy",
+                "config": {
+                    "oom_level": {
+                        "51200": 0,
+                        "89600": 100,
+                        "128000": 200,
+                        "154200": 251,
+                        "200000": 700,
+                        "262144": 702,
+                        "393216": 800
+                    },
+                    "some_psi": {
+                        "40": 50,
+                        "30": 51,
+                        "28": 101,
+                        "25": 251,
+                        "20": 701,
+                        "18": 702,
+                        "16": 800,
+                        "12": 900
+                    },
+                    "drop_threshold" :  {
+                        "51": 0,
+                        "101": 2,
+                        "251": 2,
+                        "701": 3,
+                        "702": 4,
+                        "800": 5,
+                        "900": 6
+                    },
+                    "deepkill_policy" : {
+                        "200": 4,
+                        "101": 16,
+                        "50": 32
+                    }
+                }
+            }
+        ],
+        "ReclaimActions": {
+            "reclaim_once": {
+                "psi_monitor": [
+                    {
+                        "enable": true,
+                        "target": "307200",
+                        "cpu_psi_target": 40,
+                        "trigger": {
+                            "free": "0:204800",
+                            "cache": "1843200:-1"
+                        }
+                    }
+                ],
+                "60frames_arrived_event": [
+                    {
+                        "enable": false,
+                        "target": "307200",
+                        "cpu_psi_target": 40,
+                        "trigger": {
+                            "free": "0:204800",
+                            "cache": "1843200:-1"
+                        }
+                    }
+                ],
+                "3rdcam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "target": "307200",
+                        "cpu_psi_target": 40,
+                        "trigger": {
+                            "free": "0:204800",
+                            "cache": "1843200:-1"
+                        }
+                    }
+                ],
+                "miuicam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "target": "307200",
+                        "cpu_psi_target": 40,
+                        "trigger":{
+                            "free": "0:204800",
+                            "cache": "1843200:-1"
+                        }
+                    }
+                ]
+            },
+            "kill_once":{
+                "psi_monitor": [
+                    {
+                        "enable": true,
+                        "kill_level": 0,
+                        "cpu_psi_target": 50,
+                        "trigger": {
+                            "free": "0:204800",
+                            "cache": "0:1843200",
+                            "some_mem_psi": "4:-1"
+                        }
+                    },
+                    {
+                        "enable": true,
+                        "cpu_psi_target": 50,
+                        "kill_level": 0,
+                        "trigger": {
+                            "some_mem_psi": "15:-1"
+                        }
+                    }
+                ]
+            },
+            "kill_target":{
+                "miuicam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "free_target": "512000",
+                        "target": "1843200",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "miuicam_open_event":[
+                    {
+                        "enable": true,
+                        "free_target": "512000",
+                        "target": "1843200",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "miuicam_capture_event":[
+                    {
+                        "enable": false,
+                        "free_target": "204800",
+                        "target": "1228800",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:1228800"
+                        }
+                    }
+                ],
+                "miuicam_video_switch_event":[
+                    {
+                        "enable": false,
+                        "free_target": "204800",
+                        "target": "1228800",
+                        "kill_level": 0,
+                        "trigger":{
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "3rdcam_open_event":[
+                    {
+                        "enable": true,
+                        "free_target": "512000",
+                        "target": "1843200",
+                        "kill_level": 0,
+                        "trigger": {
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ],
+                "3rdcam_activity_start_event":[
+                    {
+                        "enable": false,
+                        "free_target": "512000",
+                        "target": "1843200",
+                        "kill_level": 0,
+                        "trigger": {
+                            "availablemem": "0:-1"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

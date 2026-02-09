@@ -1,0 +1,5 @@
+service vendor.mikeybag /odm/bin/vendor.xiaomi.hardware.mikeybag-service
+    class hal
+    user system
+    group system
+    interface aidl vendor.xiaomi.hardware.mikeybag.IMiKeyBagService/default
