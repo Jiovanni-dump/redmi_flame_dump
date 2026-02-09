@@ -1,0 +1,1 @@
+mcfg_hw/generic/common/Clarence/STANDALONE_JPN/LA/DSDS_CDMALess/mcfg_hw.mbn

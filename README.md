@@ -1,0 +1,14 @@
+# missi-user 16 BP2A.250605.031.A3 OS3.0.2.0.WGUCNXM release-keys
+- manufacturer: xiaomi
+- platform: parrot
+- codename: flame
+- flavor: missi-user
+- release: 16
+- id: BP2A.250605.031.A3
+- incremental: OS3.0.2.0.WGUCNXM
+- tags: release-keys
+- fingerprint: Redmi/flame_in/flame:15/AQ3A.250604.001/OS3.0.2.0.WGUCNXM:user/release-keys
+- is_ab: true
+- brand: Redmi
+- branch: missi-user-16-BP2A.250605.031.A3-OS3.0.2.0.WGUCNXM-release-keys
+- repo: redmi_flame_dump

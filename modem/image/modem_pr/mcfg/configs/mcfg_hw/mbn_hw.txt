@@ -1,0 +1,9 @@
+mcfg_hw/generic/common/Clarence/STANDALONE/LA/DSDS/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE/LA/DSDS_CDMALess/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE/LA/SS/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE/LA/SS_CDMALess/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE_CHN/LA/DSDS/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE_GLB/LA/DSDS_CDMALess/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE_GLB/LA/SS_CDMALess/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE_IND/LA/DSDS_CDMALess/mcfg_hw.mbn
+mcfg_hw/generic/common/Clarence/STANDALONE_JPN/LA/DSDS_CDMALess/mcfg_hw.mbn
