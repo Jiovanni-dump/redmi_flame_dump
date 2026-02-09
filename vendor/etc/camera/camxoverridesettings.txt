@@ -1,0 +1,42 @@
+dynamicFpsSupported=0@30|1@30|2@30|3@30
+tfeClockFrequencyMHz=0xFFFFFFFF
+tfeCamnocBandwidthMBytes=0xFFFFFFFF
+tfeExternalBandwidthMBytes=0xFFFFFFFF
+
+invalidSOFThreshold=40
+
+#flush time
+nodeResponseTime=400
+sessionResponseTimePadding=600
+sessionMaxFlushWaitTime=1500
+
+#Disable hal buffer mgr mode
+halBufferMgrMode=0
+
+
+enableNCSService=FALSE
+numPCRsBeforeStreamOn=1
+halBufferMgrMode=0
+raiserecoverysigabrt=FALSE
+numberOfCHIThreads=7
+maxHalRequests=8
+invalidSOFThreshold=40
+anchorAlgoSelectionType=0
+anchorSelectionAlgoForMFNR=0
+
+#flush time
+nodeResponseTime=200
+sessionResponseTimePadding=300
+sessionMaxFlushWaitTime=1000
+
+logInfoMask=0x0
+logWarningMask=0
+logCoreCfgMask=0x5009A
+logRequestMapping=FALSE
+systemLogEnable=FALSE
+enableAsciiLogging=0
+enableTxtLogging=0
+offlineLoggerEnableBackupLog=FALSE
+enableCameraCoreDumpBinary=FALSE
+enableCameraCoreDumpText=FALSE
+enableSwHME=0
